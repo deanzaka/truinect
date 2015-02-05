@@ -1,0 +1,15 @@
+/home/deanzaka/Github/truinect/build/CMakeFiles/clean_test_results.dir
+/home/deanzaka/Github/truinect/build/CMakeFiles/doxygen.dir
+/home/deanzaka/Github/truinect/build/gtest/CMakeFiles/gtest.dir
+/home/deanzaka/Github/truinect/build/gtest/CMakeFiles/gtest_main.dir
+/home/deanzaka/Github/truinect/build/truinect_tracking/CMakeFiles/roscpp_generate_messages_cpp.dir
+/home/deanzaka/Github/truinect/build/truinect_tracking/CMakeFiles/roscpp_generate_messages_lisp.dir
+/home/deanzaka/Github/truinect/build/truinect_tracking/CMakeFiles/roscpp_generate_messages_py.dir
+/home/deanzaka/Github/truinect/build/truinect_tracking/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+/home/deanzaka/Github/truinect/build/truinect_tracking/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+/home/deanzaka/Github/truinect/build/truinect_tracking/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+/home/deanzaka/Github/truinect/build/CMakeFiles/run_tests.dir
+/home/deanzaka/Github/truinect/build/truinect_tracking/CMakeFiles/std_msgs_generate_messages_cpp.dir
+/home/deanzaka/Github/truinect/build/truinect_tracking/CMakeFiles/std_msgs_generate_messages_lisp.dir
+/home/deanzaka/Github/truinect/build/truinect_tracking/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/deanzaka/Github/truinect/build/CMakeFiles/tests.dir

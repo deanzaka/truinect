@@ -1,0 +1,13 @@
+<launch>  
+  
+  <arg name="rviz_on" default="False" />
+
+  <group>
+    <include file="$(find freenect_launch)/launch/freenect.launch"/>
+  </group>
+  
+  <group if="$(arg rviz_on)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find truinect_tracking)/cfg/setting.rviz" />
+  </group>
+
+</launch>

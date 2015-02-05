@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "truinect_tracking")
+set(truinect_tracking_MAINTAINER "deanzaka <deanzaka@todo.todo>")
+set(truinect_tracking_DEPRECATED "")
+set(truinect_tracking_VERSION "0.0.0")
+set(truinect_tracking_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
+set(truinect_tracking_RUN_DEPENDS "roscpp" "rospy" "std_msgs")
+set(truinect_tracking_BUILDTOOL_DEPENDS "catkin")

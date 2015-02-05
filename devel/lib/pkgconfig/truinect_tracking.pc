@@ -1,0 +1,8 @@
+prefix=/home/deanzaka/Github/truinect/devel
+
+Name: truinect_tracking
+Description: Description of truinect_tracking
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/deanzaka/Github/truinect/devel/lib 
+Requires: 
