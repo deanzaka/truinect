@@ -1,0 +1,17 @@
+<launch>  
+  
+  <arg name="rviz_on" default="True" />
+
+  <group>
+    <include file="$(find freenect_launch)/launch/freenect.launch"/>
+  </group>
+  
+  <group>
+  	<node pkg="my_pcl_tutorial" name="pcl_example" type="example" />
+  </group>
+
+  <group if="$(arg rviz_on)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_pcl_tutorial)/cfg/setting.rviz" />
+  </group>
+
+</launch>

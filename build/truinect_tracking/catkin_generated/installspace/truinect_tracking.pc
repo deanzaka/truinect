@@ -2,7 +2,7 @@ prefix=/home/deanzaka/Github/truinect/install
 
 Name: truinect_tracking
 Description: Description of truinect_tracking
-Version: 0.0.0
+Version: 0.0.1
 Cflags: 
 Libs: -L/home/deanzaka/Github/truinect/install/lib 
 Requires: 

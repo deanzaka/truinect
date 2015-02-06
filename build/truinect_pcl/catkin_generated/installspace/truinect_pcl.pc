@@ -1,0 +1,8 @@
+prefix=/home/deanzaka/Github/truinect/install
+
+Name: truinect_pcl
+Description: Description of truinect_pcl
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/deanzaka/Github/truinect/install/lib 
+Requires: 
