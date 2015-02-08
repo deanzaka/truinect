@@ -14,6 +14,8 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "catkin_generated/order_packages.cmake"
   "my_pcl_tutorial/catkin_generated/ordered_paths.cmake"
   "my_pcl_tutorial/catkin_generated/package.cmake"
+  "pcl_tracking/catkin_generated/ordered_paths.cmake"
+  "pcl_tracking/catkin_generated/package.cmake"
   "truinect_pcl/catkin_generated/ordered_paths.cmake"
   "truinect_pcl/catkin_generated/package.cmake"
   "truinect_tracking/catkin_generated/ordered_paths.cmake"
@@ -21,6 +23,8 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/home/deanzaka/Github/truinect/src/CMakeLists.txt"
   "/home/deanzaka/Github/truinect/src/my_pcl_tutorial/CMakeLists.txt"
   "/home/deanzaka/Github/truinect/src/my_pcl_tutorial/package.xml"
+  "/home/deanzaka/Github/truinect/src/pcl_tracking/CMakeLists.txt"
+  "/home/deanzaka/Github/truinect/src/pcl_tracking/package.xml"
   "/home/deanzaka/Github/truinect/src/truinect_pcl/CMakeLists.txt"
   "/home/deanzaka/Github/truinect/src/truinect_pcl/package.xml"
   "/home/deanzaka/Github/truinect/src/truinect_tracking/CMakeLists.txt"
@@ -235,6 +239,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "my_pcl_tutorial/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "pcl_tracking/CMakeFiles/CMakeDirectoryInformation.cmake"
   "truinect_pcl/CMakeFiles/CMakeDirectoryInformation.cmake"
   "truinect_tracking/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -292,6 +297,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "my_pcl_tutorial/CMakeFiles/topic_tools_generate_messages_cpp.dir/DependInfo.cmake"
   "my_pcl_tutorial/CMakeFiles/topic_tools_generate_messages_lisp.dir/DependInfo.cmake"
   "my_pcl_tutorial/CMakeFiles/topic_tools_generate_messages_py.dir/DependInfo.cmake"
+  "pcl_tracking/CMakeFiles/pcl_tracking_node.dir/DependInfo.cmake"
   "truinect_pcl/CMakeFiles/pcl_tutor_node.dir/DependInfo.cmake"
   "truinect_pcl/CMakeFiles/truinect_pcl.dir/DependInfo.cmake"
   )

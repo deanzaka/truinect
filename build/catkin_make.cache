@@ -1,2 +1,2 @@
-my_pcl_tutorial:truinect_pcl:truinect_tracking
+my_pcl_tutorial:pcl_tracking:truinect_pcl:truinect_tracking
 -DCATKIN_DEVEL_PREFIX=/home/deanzaka/Github/truinect/devel -DCMAKE_INSTALL_PREFIX=/home/deanzaka/Github/truinect/install -G Unix Makefiles

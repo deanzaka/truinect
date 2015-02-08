@@ -7,7 +7,7 @@
   </group>
   
   <group>
-  	<node pkg="my_pcl_tutorial" name="pcl_example" type="example" />
+  	<node pkg="my_pcl_tutorial" name="pcl_example" type="example" args="input:=/camera/depth/points"/>
   </group>
 
   <group if="$(arg rviz_on)">

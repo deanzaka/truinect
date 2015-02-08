@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "pcl_tracking")
+set(pcl_tracking_MAINTAINER "deanzaka <deanzaka.h@gmail.com>")
+set(pcl_tracking_DEPRECATED "")
+set(pcl_tracking_VERSION "0.0.0")
+set(pcl_tracking_BUILD_DEPENDS "pcl_conversions" "pcl_ros" "roscpp" "sensor_msgs" "libpcl-all-dev")
+set(pcl_tracking_RUN_DEPENDS "pcl_conversions" "pcl_ros" "roscpp" "sensor_msgs" "libpcl-all")
+set(pcl_tracking_BUILDTOOL_DEPENDS "catkin")

@@ -813,6 +813,19 @@ topic_tools_generate_messages_py/fast:
 .PHONY : topic_tools_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named pcl_tracking_node
+
+# Build rule for target.
+pcl_tracking_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_tracking_node
+.PHONY : pcl_tracking_node
+
+# fast build rule for target.
+pcl_tracking_node/fast:
+	$(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build
+.PHONY : pcl_tracking_node/fast
+
+#=============================================================================
 # Target rules for targets named pcl_tutor_node
 
 # Build rule for target.
@@ -902,6 +915,7 @@ help:
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... pcl_tracking_node"
 	@echo "... pcl_tutor_node"
 	@echo "... truinect_pcl"
 .PHONY : help

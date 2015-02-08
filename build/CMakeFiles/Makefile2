@@ -1713,6 +1713,56 @@ clean: my_pcl_tutorial/CMakeFiles/topic_tools_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory pcl_tracking
+
+# Convenience name for "all" pass in the directory.
+pcl_tracking/all: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/all
+.PHONY : pcl_tracking/all
+
+# Convenience name for "clean" pass in the directory.
+pcl_tracking/clean: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/clean
+.PHONY : pcl_tracking/clean
+
+# Convenience name for "preinstall" pass in the directory.
+pcl_tracking/preinstall:
+.PHONY : pcl_tracking/preinstall
+
+#=============================================================================
+# Target rules for target pcl_tracking/CMakeFiles/pcl_tracking_node.dir
+
+# All Build rule for target.
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/all:
+	$(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/depend
+	$(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  4
+	@echo "Built target pcl_tracking_node"
+.PHONY : pcl_tracking/CMakeFiles/pcl_tracking_node.dir/all
+
+# Include target in all.
+all: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
+.PHONY : pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule
+
+# Convenience name for target.
+pcl_tracking_node: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule
+.PHONY : pcl_tracking_node
+
+# clean rule for target.
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/clean:
+	$(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/clean
+.PHONY : pcl_tracking/CMakeFiles/pcl_tracking_node.dir/clean
+
+# clean rule for target.
+clean: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory truinect_pcl
 
 # Convenience name for "all" pass in the directory.
@@ -1736,7 +1786,7 @@ truinect_pcl/preinstall:
 truinect_pcl/CMakeFiles/pcl_tutor_node.dir/all: truinect_pcl/CMakeFiles/truinect_pcl.dir/all
 	$(MAKE) -f truinect_pcl/CMakeFiles/pcl_tutor_node.dir/build.make truinect_pcl/CMakeFiles/pcl_tutor_node.dir/depend
 	$(MAKE) -f truinect_pcl/CMakeFiles/pcl_tutor_node.dir/build.make truinect_pcl/CMakeFiles/pcl_tutor_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  5
 	@echo "Built target pcl_tutor_node"
 .PHONY : truinect_pcl/CMakeFiles/pcl_tutor_node.dir/all
 
@@ -1771,7 +1821,7 @@ clean: truinect_pcl/CMakeFiles/pcl_tutor_node.dir/clean
 truinect_pcl/CMakeFiles/truinect_pcl.dir/all:
 	$(MAKE) -f truinect_pcl/CMakeFiles/truinect_pcl.dir/build.make truinect_pcl/CMakeFiles/truinect_pcl.dir/depend
 	$(MAKE) -f truinect_pcl/CMakeFiles/truinect_pcl.dir/build.make truinect_pcl/CMakeFiles/truinect_pcl.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  6
 	@echo "Built target truinect_pcl"
 .PHONY : truinect_pcl/CMakeFiles/truinect_pcl.dir/all
 

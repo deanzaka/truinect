@@ -19,11 +19,15 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
    // Convert to PCL data type
   pcl_conversions::toPCL(*cloud_msg, *cloud);
 
-  // Perform the actual filtering
+  // Perform downsampling
   pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
   sor.setInputCloud (cloudPtr);
-  sor.setLeafSize (0.01, 0.01, 0.01);
+  sor.setLeafSize (0.02, 0.02, 0.02);
   sor.filter (cloud_filtered);
+
+  // Peform spacial change detection
+
+  // Find centroid
 
   // Convert to ROS data type
   sensor_msgs::PointCloud2 output;
@@ -31,14 +35,13 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 
   // Publish the data
   pub.publish (output);
-  
 }
 
 int
 main (int argc, char** argv)
 {
   // Initialize ROS
-  ros::init (argc, argv, "my_example");
+  ros::init (argc, argv, "pcl_tracking");
   ros::NodeHandle nh;
 
   // Create a ROS subscriber for the input point cloud

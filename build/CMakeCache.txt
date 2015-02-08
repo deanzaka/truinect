@@ -345,6 +345,12 @@ pcl_msgs_DIR:PATH=/opt/ros/indigo/share/pcl_msgs/cmake
 //The directory containing a CMake configuration file for pcl_ros.
 pcl_ros_DIR:PATH=/opt/ros/indigo/share/pcl_ros/cmake
 
+//Value Computed by CMake
+pcl_tracking_BINARY_DIR:STATIC=/home/deanzaka/Github/truinect/build/pcl_tracking
+
+//Value Computed by CMake
+pcl_tracking_SOURCE_DIR:STATIC=/home/deanzaka/Github/truinect/src/pcl_tracking
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
 
@@ -531,7 +537,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

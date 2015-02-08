@@ -6,5 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
 SUBDIRS(my_pcl_tutorial)
+SUBDIRS(pcl_tracking)
 SUBDIRS(truinect_pcl)
 SUBDIRS(truinect_tracking)
