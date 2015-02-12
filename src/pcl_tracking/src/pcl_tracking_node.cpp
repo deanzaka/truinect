@@ -7,6 +7,7 @@
 #include <pcl/point_types.h>
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/octree/octree.h>
+#include <pcl/filters/passthrough.h>
 
 #include "std_msgs/String.h"
 
@@ -21,6 +22,8 @@ std_msgs::String msg;
 std::stringstream ss;
 std::ostringstream convert;
 
+int Number = 0;
+
 void 
 cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 {
@@ -28,6 +31,7 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   pcl::PCLPointCloud2* cloud = new pcl::PCLPointCloud2; 
   pcl::PCLPointCloud2ConstPtr cloudPtr(cloud);
   pcl::PCLPointCloud2 cloud_filtered;
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_segment (new pcl::PointCloud<pcl::PointXYZ>);
 
    // Convert to PCL data type
   pcl_conversions::toPCL(*cloud_msg, *cloud);
@@ -42,23 +46,18 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZ>);
   pcl::fromPCLPointCloud2(cloud_filtered,*temp_cloud);
 
-  // Substract background at range z=...?
-  float th = 3; 
-  pcl::PCLPointCloud2 cock_cloud;
-  // for each_point in point_cloud:
-    // if point < th 
-      // cock_cloud.append(point)
+  // segmenting area
+  pcl::PassThrough<pcl::PointXYZ> pass;
+  pass.setInputCloud (temp_cloud);
+  pass.setFilterFieldName ("x");
+  pass.setFilterLimits (0.0, 10.0);
+  //pass.setFilterLimitsNegative (true);
+  pass.filter (*cloud_segment);
 
-  convert << "cloud_size: " << temp_cloud->points.size () << std::endl;
-
-	for (size_t i = 0; i < temp_cloud->points.size (); ++i)
-    convert << "    " << temp_cloud->points[i].x
-            << " "    << temp_cloud->points[i].y
-            << " "    << temp_cloud->points[i].z << std::endl;
-
-  //convert << Number << " test middle " << Number + 1;
+  convert << Number << " test middle " << Number + 1;
   ss << convert.str() << std::endl << std::endl;
   msg.data = ss.str();
+  
   convert.str("");
   convert.clear();
 
@@ -67,11 +66,12 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 
   // Convert to ROS data type
   sensor_msgs::PointCloud2 output;
-  pcl_conversions::fromPCL(cloud_filtered, output);
+  //pcl_conversions::fromPCL(cloud_filtered, output);
+  pcl::toROSMsg(*cloud_segment, output);
 
   // Publish the data
   pub.publish (output);
-  chatter_pub.publish(msg);
+  //chatter_pub.publish(msg);
 }
 
 int

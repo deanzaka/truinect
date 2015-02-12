@@ -292,8 +292,12 @@ pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/exceptions.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/filters/boost.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/filters/filter.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/filters/filter_indices.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/filters/impl/filter.hpp
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/filters/impl/filter_indices.hpp
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/filters/impl/passthrough.hpp
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/filters/impl/voxel_grid.hpp
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/filters/passthrough.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/filters/voxel_grid.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/for_each_type.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/impl/pcl_base.hpp

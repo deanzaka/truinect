@@ -53,8 +53,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 5.535
-        Min Value: 0.50903
+        Max Value: 6.235
+        Min Value: 3.659
         Value: true
       Axis: X
       Channel Name: intensity
@@ -80,19 +80,37 @@ Visualization Manager:
       Use rainbow: true
       Value: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        camera_depth_frame:
+          Value: true
+        camera_depth_optical_frame:
+          Value: true
+        camera_link:
+          Value: true
+        camera_rgb_frame:
+          Value: true
+        camera_rgb_optical_frame:
+          Value: true
+        world:
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        camera_link:
+          camera_rgb_frame:
+            camera_rgb_optical_frame:
+              {}
+        world:
+          camera_depth_frame:
+            {}
       Update Interval: 0
-      Value: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -117,22 +135,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 7.12864
+      Distance: 5.13423
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 3.66489
-        Y: -0.292668
-        Z: -0.1793
+        X: 1.79182
+        Y: 0.0232787
+        Z: -0.235883
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.185398
+      Pitch: 0.420397
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.07732
+      Yaw: 3.14233
     Saved: ~
 Window Geometry:
   Displays:
