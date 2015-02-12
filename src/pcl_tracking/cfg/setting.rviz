@@ -53,8 +53,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 6.235
-        Min Value: 3.659
+        Max Value: 8.767
+        Min Value: 0.565968
         Value: true
       Axis: X
       Channel Name: intensity
@@ -103,12 +103,13 @@ Visualization Manager:
       Show Names: true
       Tree:
         camera_link:
+          camera_depth_frame:
+            {}
           camera_rgb_frame:
             camera_rgb_optical_frame:
               {}
         world:
-          camera_depth_frame:
-            {}
+          {}
       Update Interval: 0
       Value: true
   Enabled: true

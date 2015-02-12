@@ -49,20 +49,31 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   // segmenting area
   pcl::PassThrough<pcl::PointXYZ> pass;
   pass.setInputCloud (temp_cloud);
-  pass.setFilterFieldName ("x");
+  pass.setFilterFieldName ("y");
   pass.setFilterLimits (0.0, 10.0);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
-  convert << Number << " test middle " << Number + 1;
+  // Find centroid
+  float sum_x = 0;
+  float sum_y = 0;
+  float sum_z = 0;
+  for(size_t i = 0; i < cloud_segment->points.size(); ++i) {
+  	sum_x += cloud_segment->points[i].x;
+  	sum_y += cloud_segment->points[i].y;
+  	sum_z += cloud_segment->points[i].z;
+  }
+
+  sum_x = sum_x / cloud_segment->points.size();
+  sum_y = sum_y / cloud_segment->points.size();
+  sum_z = sum_z / cloud_segment->points.size();
+
+  convert << "Test: " << sum_x << "  " << sum_y << "  " << sum_z;
   ss << convert.str() << std::endl << std::endl;
   msg.data = ss.str();
   
   convert.str("");
   convert.clear();
-
-  
-  // Find centroid
 
   // Convert to ROS data type
   sensor_msgs::PointCloud2 output;
@@ -71,7 +82,7 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 
   // Publish the data
   pub.publish (output);
-  //chatter_pub.publish(msg);
+  chatter_pub.publish(msg);
 }
 
 int
