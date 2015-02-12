@@ -1,12 +1,25 @@
 #include <ros/ros.h>
+#include <ros/console.h>
 // PCL specific includes
 #include <sensor_msgs/PointCloud2.h>
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/filters/voxel_grid.h>
+#include <pcl/octree/octree.h>
+
+#include "std_msgs/String.h"
+
+#include <sstream>
+#include <vector>
 
 ros::Publisher pub;
+ros::Publisher chatter_pub;
+
+std_msgs::String msg;
+
+std::stringstream ss;
+std::ostringstream convert;
 
 void 
 cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
@@ -25,8 +38,31 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   sor.setLeafSize (0.02, 0.02, 0.02);
   sor.filter (cloud_filtered);
 
-  // Peform spacial change detection
+  // convert PointCloud2 to pcl::PointCloud<pcl::PointXYZ>
+  pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZ>);
+  pcl::fromPCLPointCloud2(cloud_filtered,*temp_cloud);
 
+  // Substract background at range z=...?
+  float th = 3; 
+  pcl::PCLPointCloud2 cock_cloud;
+  // for each_point in point_cloud:
+    // if point < th 
+      // cock_cloud.append(point)
+
+  convert << "cloud_size: " << temp_cloud->points.size () << std::endl;
+
+	for (size_t i = 0; i < temp_cloud->points.size (); ++i)
+    convert << "    " << temp_cloud->points[i].x
+            << " "    << temp_cloud->points[i].y
+            << " "    << temp_cloud->points[i].z << std::endl;
+
+  //convert << Number << " test middle " << Number + 1;
+  ss << convert.str() << std::endl << std::endl;
+  msg.data = ss.str();
+  convert.str("");
+  convert.clear();
+
+  
   // Find centroid
 
   // Convert to ROS data type
@@ -35,6 +71,7 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 
   // Publish the data
   pub.publish (output);
+  chatter_pub.publish(msg);
 }
 
 int
@@ -49,7 +86,8 @@ main (int argc, char** argv)
 
   // Create a ROS publisher for the output point cloud
   pub = nh.advertise<sensor_msgs::PointCloud2> ("output", 1);
+  chatter_pub = nh.advertise<std_msgs::String>("chatter", 1);
 
   // Spin
-  ros::spin ();
+  ros::spin();
 }
