@@ -163,6 +163,48 @@ pcl_tracking_node/fast:
 	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build
 .PHONY : pcl_tracking_node/fast
 
+# Convenience name for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_cpp: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_cpp/fast:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+.PHONY : visualization_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_lisp: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_lisp/fast:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+.PHONY : visualization_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_py: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : visualization_msgs_generate_messages_py
+
+# fast build rule for target.
+visualization_msgs_generate_messages_py/fast:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+.PHONY : visualization_msgs_generate_messages_py/fast
+
 src/pcl_tracking_node.o: src/pcl_tracking_node.cpp.o
 .PHONY : src/pcl_tracking_node.o
 
@@ -201,6 +243,9 @@ help:
 	@echo "... pcl_tracking_node"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... visualization_msgs_generate_messages_lisp"
+	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... src/pcl_tracking_node.o"
 	@echo "... src/pcl_tracking_node.i"
 	@echo "... src/pcl_tracking_node.s"

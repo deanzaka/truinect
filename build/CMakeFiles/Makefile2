@@ -1721,6 +1721,9 @@ pcl_tracking/all: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/all
 
 # Convenience name for "clean" pass in the directory.
 pcl_tracking/clean: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/clean
+pcl_tracking/clean: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
+pcl_tracking/clean: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean
+pcl_tracking/clean: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
 .PHONY : pcl_tracking/clean
 
 # Convenience name for "preinstall" pass in the directory.
@@ -1760,6 +1763,99 @@ pcl_tracking/CMakeFiles/pcl_tracking_node.dir/clean:
 
 # clean rule for target.
 clean: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles 
+	@echo "Built target visualization_msgs_generate_messages_cpp"
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_cpp: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# clean rule for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles 
+	@echo "Built target visualization_msgs_generate_messages_lisp"
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_lisp: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# clean rule for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles 
+	@echo "Built target visualization_msgs_generate_messages_py"
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_py: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : visualization_msgs_generate_messages_py
+
+# clean rule for target.
+pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
+.PHONY : pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================

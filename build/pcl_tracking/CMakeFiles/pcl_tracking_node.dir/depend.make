@@ -4,6 +4,11 @@
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /home/deanzaka/Github/truinect/src/pcl_tracking/src/pcl_tracking_node.cpp
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/Point.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/Pose.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/PoseStamped.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/Quaternion.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/Vector3.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/pcl_conversions/pcl_conversions.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/pcl_msgs/ModelCoefficients.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/pcl_msgs/PointIndices.h
@@ -66,8 +71,10 @@ pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/Image.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/PointCloud2.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/PointField.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/std_msgs/ColorRGBA.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/std_msgs/String.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /opt/ros/indigo/include/visualization_msgs/Marker.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/eigen3/Eigen/Cholesky
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/eigen3/Eigen/Core
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/eigen3/Eigen/Eigen2Support
@@ -279,10 +286,13 @@ pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/PCLPointField.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/PointIndices.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/PolygonMesh.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/TextureMesh.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/Vertices.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/common/common.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/common/concatenate.h
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/common/copy_point.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/common/impl/common.hpp
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/common/impl/copy_point.hpp
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/common/impl/io.hpp
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/common/io.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/common/point_operators.h
@@ -309,6 +319,7 @@ pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/io/pcd_io.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/octree/impl/octree_pointcloud.hpp
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/octree/impl/octree_pointcloud_voxelcentroid.hpp
+pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/octree/impl/octree_search.hpp
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/octree/octree.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/octree/octree2buf_base.h
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o: /usr/include/pcl-1.7/pcl/octree/octree_base.h
