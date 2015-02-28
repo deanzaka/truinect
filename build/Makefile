@@ -865,6 +865,19 @@ visualization_msgs_generate_messages_py/fast:
 .PHONY : visualization_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named rviz_test_node
+
+# Build rule for target.
+rviz_test_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rviz_test_node
+.PHONY : rviz_test_node
+
+# fast build rule for target.
+rviz_test_node/fast:
+	$(MAKE) -f rviz_test/CMakeFiles/rviz_test_node.dir/build.make rviz_test/CMakeFiles/rviz_test_node.dir/build
+.PHONY : rviz_test_node/fast
+
+#=============================================================================
 # Target rules for targets named pcl_tutor_node
 
 # Build rule for target.
@@ -958,6 +971,7 @@ help:
 	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... rviz_test_node"
 	@echo "... pcl_tutor_node"
 	@echo "... truinect_pcl"
 .PHONY : help

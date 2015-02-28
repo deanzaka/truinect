@@ -1859,6 +1859,56 @@ clean: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory rviz_test
+
+# Convenience name for "all" pass in the directory.
+rviz_test/all: rviz_test/CMakeFiles/rviz_test_node.dir/all
+.PHONY : rviz_test/all
+
+# Convenience name for "clean" pass in the directory.
+rviz_test/clean: rviz_test/CMakeFiles/rviz_test_node.dir/clean
+.PHONY : rviz_test/clean
+
+# Convenience name for "preinstall" pass in the directory.
+rviz_test/preinstall:
+.PHONY : rviz_test/preinstall
+
+#=============================================================================
+# Target rules for target rviz_test/CMakeFiles/rviz_test_node.dir
+
+# All Build rule for target.
+rviz_test/CMakeFiles/rviz_test_node.dir/all:
+	$(MAKE) -f rviz_test/CMakeFiles/rviz_test_node.dir/build.make rviz_test/CMakeFiles/rviz_test_node.dir/depend
+	$(MAKE) -f rviz_test/CMakeFiles/rviz_test_node.dir/build.make rviz_test/CMakeFiles/rviz_test_node.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  6
+	@echo "Built target rviz_test_node"
+.PHONY : rviz_test/CMakeFiles/rviz_test_node.dir/all
+
+# Include target in all.
+all: rviz_test/CMakeFiles/rviz_test_node.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+rviz_test/CMakeFiles/rviz_test_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 rviz_test/CMakeFiles/rviz_test_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
+.PHONY : rviz_test/CMakeFiles/rviz_test_node.dir/rule
+
+# Convenience name for target.
+rviz_test_node: rviz_test/CMakeFiles/rviz_test_node.dir/rule
+.PHONY : rviz_test_node
+
+# clean rule for target.
+rviz_test/CMakeFiles/rviz_test_node.dir/clean:
+	$(MAKE) -f rviz_test/CMakeFiles/rviz_test_node.dir/build.make rviz_test/CMakeFiles/rviz_test_node.dir/clean
+.PHONY : rviz_test/CMakeFiles/rviz_test_node.dir/clean
+
+# clean rule for target.
+clean: rviz_test/CMakeFiles/rviz_test_node.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory truinect_pcl
 
 # Convenience name for "all" pass in the directory.
@@ -1917,7 +1967,7 @@ clean: truinect_pcl/CMakeFiles/pcl_tutor_node.dir/clean
 truinect_pcl/CMakeFiles/truinect_pcl.dir/all:
 	$(MAKE) -f truinect_pcl/CMakeFiles/truinect_pcl.dir/build.make truinect_pcl/CMakeFiles/truinect_pcl.dir/depend
 	$(MAKE) -f truinect_pcl/CMakeFiles/truinect_pcl.dir/build.make truinect_pcl/CMakeFiles/truinect_pcl.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  7
 	@echo "Built target truinect_pcl"
 .PHONY : truinect_pcl/CMakeFiles/truinect_pcl.dir/all
 

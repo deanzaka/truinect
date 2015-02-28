@@ -127,6 +127,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/deanzaka/Github/truinect/build/gtest/cmake_install.cmake")
   INCLUDE("/home/deanzaka/Github/truinect/build/my_pcl_tutorial/cmake_install.cmake")
   INCLUDE("/home/deanzaka/Github/truinect/build/pcl_tracking/cmake_install.cmake")
+  INCLUDE("/home/deanzaka/Github/truinect/build/rviz_test/cmake_install.cmake")
   INCLUDE("/home/deanzaka/Github/truinect/build/truinect_pcl/cmake_install.cmake")
   INCLUDE("/home/deanzaka/Github/truinect/build/truinect_tracking/cmake_install.cmake")
 

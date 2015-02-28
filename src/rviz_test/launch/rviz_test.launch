@@ -1,0 +1,19 @@
+<launch>  
+  
+  <arg name="rviz" default="True" />
+
+  <node pkg="tf" type="static_transform_publisher" name="world_kinect_tf_bc" args="0 0 0 0 0 0 /test_world /camera_depth_frame 10" />
+
+  <group>
+    <include file="$(find freenect_launch)/launch/freenect.launch"/>
+  </group>
+  
+  <group>
+  	<node pkg="rviz_test" name="rviz_test" type="rviz_test_node" args="input:=/camera/depth/points"/>
+  </group>
+
+  <group if="$(arg rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rviz_test)/cfg/setting.rviz" />
+  </group>
+
+</launch>

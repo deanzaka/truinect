@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rviz_test")
+set(rviz_test_MAINTAINER "deanzaka <deanzaka.h@gmail.com>")
+set(rviz_test_DEPRECATED "")
+set(rviz_test_VERSION "0.0.0")
+set(rviz_test_BUILD_DEPENDS "pcl_conversions" "pcl_ros" "roscpp" "sensor_msgs" "std_msgs" "libpcl-all-dev")
+set(rviz_test_RUN_DEPENDS "pcl_conversions" "pcl_ros" "roscpp" "sensor_msgs" "std_msgs" "libpcl-all")
+set(rviz_test_BUILDTOOL_DEPENDS "catkin")

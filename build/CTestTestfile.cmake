@@ -7,5 +7,6 @@
 SUBDIRS(gtest)
 SUBDIRS(my_pcl_tutorial)
 SUBDIRS(pcl_tracking)
+SUBDIRS(rviz_test)
 SUBDIRS(truinect_pcl)
 SUBDIRS(truinect_tracking)
