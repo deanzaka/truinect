@@ -1,169 +1,92 @@
 #include <ros/ros.h>
-#include <ros/console.h>
-
-// PCL specific includes
-#include <sensor_msgs/PointCloud2.h>
-#include <pcl_conversions/pcl_conversions.h>
-#include <pcl/point_cloud.h>
-#include <pcl/point_types.h>
-#include <pcl/filters/voxel_grid.h>
-#include <pcl/octree/octree.h>
-#include <pcl/filters/passthrough.h>
-
-// ROS includes
-#include <geometry_msgs/PoseStamped.h>
 #include <visualization_msgs/Marker.h>
-#include "std_msgs/String.h"
 
-#include <sstream>
-#include <vector>
+#include <cmath>
 
-ros::Publisher pub;
-ros::Publisher chatter_pub;
-ros::Publisher cock_pose_pub;
-ros::Publisher marker_pub;
-
-visualization_msgs::Marker marker;
-
-std_msgs::String msg;
-
-std::stringstream ss;
-std::ostringstream convert;
-
-void
-marker_init() {
- // Set our initial shape type to be a cube
-  uint32_t shape = visualization_msgs::Marker::ARROW;
-
-  marker.header.frame_id = "test_world";
-  marker.header.stamp = ros::Time::now();
-  marker.type = shape;
-  marker.action = visualization_msgs::Marker::ADD;
-
-  marker.scale.x = 0.2;
-  marker.scale.y = 0.05;
-  marker.scale.z = 0.05;
-
-  marker.color.r = 1.0f;
-  marker.color.g = 0.0f;
-  marker.color.b = 0.0f;
-  marker.color.a = 1.0;
-}
-
-void 
-cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
+int main( int argc, char** argv )
 {
-  // Container for original & filtered data
-  pcl::PCLPointCloud2* cloud = new pcl::PCLPointCloud2; 
-  pcl::PCLPointCloud2ConstPtr cloudPtr(cloud);
-  pcl::PCLPointCloud2 cloud_filtered;
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_segment (new pcl::PointCloud<pcl::PointXYZ>);
+  ros::init(argc, argv, "points_and_lines");
+  ros::NodeHandle n;
+  ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 10);
 
-   // Convert to PCL data type
-  pcl_conversions::toPCL(*cloud_msg, *cloud);
+  ros::Rate r(30);
 
-  // Perform downsampling
-  pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
-  sor.setInputCloud (cloudPtr);
-  sor.setLeafSize (0.01, 0.01, 0.01);
-  sor.filter (cloud_filtered);
+  float f = 0.0;
+  while (ros::ok())
+  {
 
-  // convert PointCloud2 to pcl::PointCloud<pcl::PointXYZ>
-  pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZ>);
-  pcl::fromPCLPointCloud2(cloud_filtered,*temp_cloud);
+    visualization_msgs::Marker points, line_strip, line_list;
+    points.header.frame_id = line_strip.header.frame_id = line_list.header.frame_id = "/my_frame";
+    points.header.stamp = line_strip.header.stamp = line_list.header.stamp = ros::Time::now();
+    points.ns = line_strip.ns = line_list.ns = "points_and_lines";
+    points.action = line_strip.action = line_list.action = visualization_msgs::Marker::ADD;
+    points.pose.orientation.w = line_strip.pose.orientation.w = line_list.pose.orientation.w = 1.0;
 
-  // segmenting area
-  pcl::PassThrough<pcl::PointXYZ> pass;
-  pass.setInputCloud (temp_cloud);
-  pass.setFilterFieldName ("x");
-  pass.setFilterLimits (-1.5, 1.5);
-  //pass.setFilterLimitsNegative (true);
-  pass.filter (*cloud_segment);
 
-  pass.setInputCloud (cloud_segment);
-  pass.setFilterFieldName ("y");
-  pass.setFilterLimits (-1.5, 1.5);
-  //pass.setFilterLimitsNegative (true);
-  pass.filter (*cloud_segment);
 
-  pass.setInputCloud (cloud_segment);
-  pass.setFilterFieldName ("z");
-  pass.setFilterLimits (1, 4);
-  //pass.setFilterLimitsNegative (true);
-  pass.filter (*cloud_segment);
+    points.id = 0;
+    line_strip.id = 1;
+    line_list.id = 2;
 
-  // Find centroid
-  float sum_x = 0;
-  float sum_y = 0;
-  float sum_z = 0;
-  if(cloud_segment->points.size() > 0) {
-    for(size_t i = 0; i < cloud_segment->points.size(); ++i) {
-      sum_x += cloud_segment->points[i].x;
-      sum_y += cloud_segment->points[i].y;
-      sum_z += cloud_segment->points[i].z;
+
+
+    points.type = visualization_msgs::Marker::POINTS;
+    line_strip.type = visualization_msgs::Marker::LINE_STRIP;
+    line_list.type = visualization_msgs::Marker::LINE_LIST;
+
+
+
+    // POINTS markers use x and y scale for width/height respectively
+    points.scale.x = 0.2;
+    points.scale.y = 0.2;
+
+    // LINE_STRIP/LINE_LIST markers use only the x component of scale, for the line width
+    line_strip.scale.x = 0.1;
+    line_list.scale.x = 0.1;
+
+
+
+    // Points are green
+    points.color.g = 1.0f;
+    points.color.a = 1.0;
+
+    // Line strip is blue
+    line_strip.color.b = 1.0;
+    line_strip.color.a = 1.0;
+
+    // Line list is red
+    line_list.color.r = 1.0;
+    line_list.color.a = 1.0;
+
+
+
+    // Create the vertices for the points and lines
+    for (uint32_t i = 0; i < 10; ++i)
+    {
+      float y = 5 * sin(f + i / 10.0f * 2 * M_PI);
+      float z = 5 * cos(f + i / 10.0f * 2 * M_PI);
+
+      geometry_msgs::Point p;
+      p.x = (int32_t)i - 5;
+      p.y = y;
+      p.z = z;
+
+      points.points.push_back(p);
+      line_strip.points.push_back(p);
+
+      // The line list needs two points for each line
+      line_list.points.push_back(p);
+      p.z += 1.0;
+      line_list.points.push_back(p);
     }
 
-    sum_x = sum_x / cloud_segment->points.size();
-    sum_y = sum_y / cloud_segment->points.size();
-    sum_z = sum_z / cloud_segment->points.size();
 
-    geometry_msgs::PoseStamped sPose;
+    marker_pub.publish(points);
+    marker_pub.publish(line_strip);
+    marker_pub.publish(line_list);
 
-    marker.lifetime = ros::Duration();
-    
-    sPose.pose.position.x = sum_z; // is z in point cloud
-    sPose.pose.position.y = -(sum_x); // is -x in point cloud
-    sPose.pose.position.z = -(sum_y); // is -y in point cloud
+    r.sleep();
 
-    sPose.pose.orientation.x = 0.0;
-    sPose.pose.orientation.y = 0.0;
-    sPose.pose.orientation.z = 0.0;
-    sPose.pose.orientation.w = 1.0;
-
-    cock_pose_pub.publish(sPose);
-    marker.pose = sPose.pose;
-    marker_pub.publish(marker);
-
-    convert << "Test: " << sum_x << "  " << sum_y << "  " << sum_z;
-    ss << convert.str() << std::endl << std::endl;
-    msg.data = ss.str();
-    
-    convert.str("");
-    convert.clear();
-    
-    chatter_pub.publish(msg);
+    f += 0.04;
   }
-
-  
-
-  // Convert to ROS data type
-  sensor_msgs::PointCloud2 output;
-  //pcl_conversions::fromPCL(cloud_filtered, output);
-  pcl::toROSMsg(*cloud_segment, output);
-
-  // Publish the data
-  pub.publish (output);
-}
-
-int
-main (int argc, char** argv)
-{
-  // Initialize ROS
-  ros::init (argc, argv, "pcl_tracking");
-  ros::NodeHandle nh;
-
-  // Initialize marker
-  marker_init();
-
-  // Create a ROS subscriber for the input point cloud
-  ros::Subscriber sub = nh.subscribe ("input", 1, cloud_cb);
-
-  // Create a ROS publisher for the output point cloud
-  pub = nh.advertise<sensor_msgs::PointCloud2> ("output", 1);
-  chatter_pub = nh.advertise<std_msgs::String>("chatter", 1);
-  cock_pose_pub = nh.advertise<geometry_msgs::PoseStamped>("cock_pose", 1);
-  marker_pub = nh.advertise<visualization_msgs::Marker>("visualization_marker", 1);
-
-  // Spin
-  ros::spin();
 }

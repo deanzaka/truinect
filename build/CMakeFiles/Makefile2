@@ -1880,7 +1880,7 @@ rviz_test/preinstall:
 rviz_test/CMakeFiles/rviz_test_node.dir/all:
 	$(MAKE) -f rviz_test/CMakeFiles/rviz_test_node.dir/build.make rviz_test/CMakeFiles/rviz_test_node.dir/depend
 	$(MAKE) -f rviz_test/CMakeFiles/rviz_test_node.dir/build.make rviz_test/CMakeFiles/rviz_test_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  5
 	@echo "Built target rviz_test_node"
 .PHONY : rviz_test/CMakeFiles/rviz_test_node.dir/all
 
@@ -1907,108 +1907,6 @@ rviz_test/CMakeFiles/rviz_test_node.dir/clean:
 # clean rule for target.
 clean: rviz_test/CMakeFiles/rviz_test_node.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory truinect_pcl
-
-# Convenience name for "all" pass in the directory.
-truinect_pcl/all: truinect_pcl/CMakeFiles/pcl_tutor_node.dir/all
-truinect_pcl/all: truinect_pcl/CMakeFiles/truinect_pcl.dir/all
-.PHONY : truinect_pcl/all
-
-# Convenience name for "clean" pass in the directory.
-truinect_pcl/clean: truinect_pcl/CMakeFiles/pcl_tutor_node.dir/clean
-truinect_pcl/clean: truinect_pcl/CMakeFiles/truinect_pcl.dir/clean
-.PHONY : truinect_pcl/clean
-
-# Convenience name for "preinstall" pass in the directory.
-truinect_pcl/preinstall:
-.PHONY : truinect_pcl/preinstall
-
-#=============================================================================
-# Target rules for target truinect_pcl/CMakeFiles/pcl_tutor_node.dir
-
-# All Build rule for target.
-truinect_pcl/CMakeFiles/pcl_tutor_node.dir/all: truinect_pcl/CMakeFiles/truinect_pcl.dir/all
-	$(MAKE) -f truinect_pcl/CMakeFiles/pcl_tutor_node.dir/build.make truinect_pcl/CMakeFiles/pcl_tutor_node.dir/depend
-	$(MAKE) -f truinect_pcl/CMakeFiles/pcl_tutor_node.dir/build.make truinect_pcl/CMakeFiles/pcl_tutor_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  5
-	@echo "Built target pcl_tutor_node"
-.PHONY : truinect_pcl/CMakeFiles/pcl_tutor_node.dir/all
-
-# Include target in all.
-all: truinect_pcl/CMakeFiles/pcl_tutor_node.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-truinect_pcl/CMakeFiles/pcl_tutor_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 truinect_pcl/CMakeFiles/pcl_tutor_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
-.PHONY : truinect_pcl/CMakeFiles/pcl_tutor_node.dir/rule
-
-# Convenience name for target.
-pcl_tutor_node: truinect_pcl/CMakeFiles/pcl_tutor_node.dir/rule
-.PHONY : pcl_tutor_node
-
-# clean rule for target.
-truinect_pcl/CMakeFiles/pcl_tutor_node.dir/clean:
-	$(MAKE) -f truinect_pcl/CMakeFiles/pcl_tutor_node.dir/build.make truinect_pcl/CMakeFiles/pcl_tutor_node.dir/clean
-.PHONY : truinect_pcl/CMakeFiles/pcl_tutor_node.dir/clean
-
-# clean rule for target.
-clean: truinect_pcl/CMakeFiles/pcl_tutor_node.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target truinect_pcl/CMakeFiles/truinect_pcl.dir
-
-# All Build rule for target.
-truinect_pcl/CMakeFiles/truinect_pcl.dir/all:
-	$(MAKE) -f truinect_pcl/CMakeFiles/truinect_pcl.dir/build.make truinect_pcl/CMakeFiles/truinect_pcl.dir/depend
-	$(MAKE) -f truinect_pcl/CMakeFiles/truinect_pcl.dir/build.make truinect_pcl/CMakeFiles/truinect_pcl.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  7
-	@echo "Built target truinect_pcl"
-.PHONY : truinect_pcl/CMakeFiles/truinect_pcl.dir/all
-
-# Include target in all.
-all: truinect_pcl/CMakeFiles/truinect_pcl.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-truinect_pcl/CMakeFiles/truinect_pcl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 truinect_pcl/CMakeFiles/truinect_pcl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
-.PHONY : truinect_pcl/CMakeFiles/truinect_pcl.dir/rule
-
-# Convenience name for target.
-truinect_pcl: truinect_pcl/CMakeFiles/truinect_pcl.dir/rule
-.PHONY : truinect_pcl
-
-# clean rule for target.
-truinect_pcl/CMakeFiles/truinect_pcl.dir/clean:
-	$(MAKE) -f truinect_pcl/CMakeFiles/truinect_pcl.dir/build.make truinect_pcl/CMakeFiles/truinect_pcl.dir/clean
-.PHONY : truinect_pcl/CMakeFiles/truinect_pcl.dir/clean
-
-# clean rule for target.
-clean: truinect_pcl/CMakeFiles/truinect_pcl.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory truinect_tracking
-
-# Convenience name for "all" pass in the directory.
-truinect_tracking/all:
-.PHONY : truinect_tracking/all
-
-# Convenience name for "clean" pass in the directory.
-truinect_tracking/clean:
-.PHONY : truinect_tracking/clean
-
-# Convenience name for "preinstall" pass in the directory.
-truinect_tracking/preinstall:
-.PHONY : truinect_tracking/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.

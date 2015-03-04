@@ -877,32 +877,6 @@ rviz_test_node/fast:
 	$(MAKE) -f rviz_test/CMakeFiles/rviz_test_node.dir/build.make rviz_test/CMakeFiles/rviz_test_node.dir/build
 .PHONY : rviz_test_node/fast
 
-#=============================================================================
-# Target rules for targets named pcl_tutor_node
-
-# Build rule for target.
-pcl_tutor_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcl_tutor_node
-.PHONY : pcl_tutor_node
-
-# fast build rule for target.
-pcl_tutor_node/fast:
-	$(MAKE) -f truinect_pcl/CMakeFiles/pcl_tutor_node.dir/build.make truinect_pcl/CMakeFiles/pcl_tutor_node.dir/build
-.PHONY : pcl_tutor_node/fast
-
-#=============================================================================
-# Target rules for targets named truinect_pcl
-
-# Build rule for target.
-truinect_pcl: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 truinect_pcl
-.PHONY : truinect_pcl
-
-# fast build rule for target.
-truinect_pcl/fast:
-	$(MAKE) -f truinect_pcl/CMakeFiles/truinect_pcl.dir/build.make truinect_pcl/CMakeFiles/truinect_pcl.dir/build
-.PHONY : truinect_pcl/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -972,8 +946,6 @@ help:
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... rviz_test_node"
-	@echo "... pcl_tutor_node"
-	@echo "... truinect_pcl"
 .PHONY : help
 
 
