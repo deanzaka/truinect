@@ -11,8 +11,6 @@ ros/ros.h
 -
 visualization_msgs/Marker.h
 -
-cmath
--
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

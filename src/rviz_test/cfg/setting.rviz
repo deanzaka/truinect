@@ -50,7 +50,7 @@ Visualization Manager:
         Z: 0
       Plane: XY
       Plane Cell Count: 10
-      Reference Frame: test_world
+      Reference Frame: my_frame
       Value: true
     - Class: rviz/TF
       Enabled: true
@@ -77,7 +77,7 @@ Visualization Manager:
       Marker Topic: /visualization_marker
       Name: Marker
       Namespaces:
-        points_and_lines: true
+        basic_shapes: true
       Queue Size: 100
       Value: true
   Enabled: true
@@ -104,22 +104,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 35.4627
+      Distance: 3.35812
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.488138
-        Y: -6.9677
-        Z: -2.11891
+        X: -0.032353
+        Y: -0.328759
+        Z: 1.11383
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.539798
+      Pitch: 0.41
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.42629
+      Yaw: 4.74322
     Saved: ~
 Window Geometry:
   Displays:

@@ -35,7 +35,7 @@ marker_init() {
  // Set our initial shape type to be a cube
   uint32_t shape = visualization_msgs::Marker::CUBE;
 
-  marker.header.frame_id = "map";
+  marker.header.frame_id = "new_world";
   marker.header.stamp = ros::Time::now();
   marker.type = shape;
   marker.action = visualization_msgs::Marker::ADD;
@@ -75,20 +75,23 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   // segmenting area
   pcl::PassThrough<pcl::PointXYZ> pass;
   pass.setInputCloud (temp_cloud);
-  pass.setFilterFieldName ("x");
+  // left - right
+  // pass.setFilterFieldName ("x");
   // pass.setFilterLimits (-0.6, 0.6);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
   pass.setInputCloud (cloud_segment);
-  pass.setFilterFieldName ("y");
-  // pass.setFilterLimits (-0.5, 0.32);
+  // up - down
+  // pass.setFilterFieldName ("y");
+  // pass.setFilterLimits (-3, 0);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
   pass.setInputCloud (cloud_segment);
+  // backward - forward
   pass.setFilterFieldName ("z");
-  // pass.setFilterLimits (2.7, 3.6);
+  pass.setFilterLimits (1, 2.5);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
@@ -111,9 +114,9 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 
     marker.lifetime = ros::Duration();
     
-    sPose.pose.position.x = sum_x;
-    sPose.pose.position.y = sum_y;
-    sPose.pose.position.z = sum_z;
+    sPose.pose.position.x = sum_z; // equals to z in pcl // backward - forward
+    sPose.pose.position.y = -(sum_x); // equals to -x in pcl // right - left
+    sPose.pose.position.z = -(sum_y); // equals to -y in pcl // down - up
 
     sPose.pose.orientation.x = 0.0;
     sPose.pose.orientation.y = 0.0;
