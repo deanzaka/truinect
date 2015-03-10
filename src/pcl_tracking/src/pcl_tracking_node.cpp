@@ -23,7 +23,7 @@ ros::Publisher chatter_pub;
 ros::Publisher cock_pose_pub;
 ros::Publisher marker_pub;
 
-visualization_msgs::Marker marker;
+visualization_msgs::Marker marker, line, points;
 
 std_msgs::String msg;
 
@@ -34,20 +34,42 @@ void
 marker_init() {
  // Set our initial shape type to be a cube
   uint32_t shape = visualization_msgs::Marker::CUBE;
+	uint32_t line_strip = visualization_msgs::Marker::LINE_STRIP;
+	uint32_t points_mark =  visualization_msgs::Marker::POINTS;
 
-  marker.header.frame_id = "new_world";
-  marker.header.stamp = ros::Time::now();
+  points.header.frame_id = line.header.frame_id = marker.header.frame_id = "new_world";
+  points.header.stamp = line.header.stamp = marker.header.stamp = ros::Time::now();
   marker.type = shape;
-  marker.action = visualization_msgs::Marker::ADD;
+  line.type = line_strip;
+  points.type = points_mark;
+  points.action = line.action = marker.action = visualization_msgs::Marker::ADD;
 
-  marker.scale.x = 0.5;
-  marker.scale.y = 0.5;
-  marker.scale.z = 0.5;
+  line.id = 0;
+  points.id = 1;
+  marker.id = 2;
+
+  marker.scale.x = 0.1;
+  marker.scale.y = 0.1;
+  marker.scale.z = 0.1;
 
   marker.color.r = 0.0f;
   marker.color.g = 1.0f;
   marker.color.b = 0.0f;
   marker.color.a = 1.0;
+
+  points.scale.x = 0.1;
+  points.scale.y = 0.1;
+
+  points.color.r = 0.0f;
+  points.color.g = 0.0f;
+  points.color.b = 1.0f;
+  points.color.a = 1.0;
+
+  line.scale.x = 0.05;	
+  line.color.r = 1.0f;
+  line.color.g = 0.0f;
+  line.color.b = 0.0f;
+  line.color.a = 1.0;
 }
 
 void 
@@ -91,7 +113,7 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   pass.setInputCloud (cloud_segment);
   // backward - forward
   pass.setFilterFieldName ("z");
-  pass.setFilterLimits (1, 2.5);
+  pass.setFilterLimits (1, 3.5);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
@@ -125,7 +147,20 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 
     cock_pose_pub.publish(sPose);
     marker.pose = sPose.pose;
+
+    geometry_msgs::Point p;
+    p.x = sum_z;
+    p.y = -(sum_x);
+    p.z = -(sum_y);
+
+    line.pose.orientation.w = 1.0;
+    points.pose.orientation.w = 1.0;
+    line.points.push_back(p);
+    points.points.push_back(p);
+
     marker_pub.publish(marker);
+    marker_pub.publish(line);
+    marker_pub.publish(points);
 
 	  convert << "Test: " << sum_x << "  " << sum_y << "  " << sum_z;
 	  ss << convert.str() << std::endl << std::endl;
