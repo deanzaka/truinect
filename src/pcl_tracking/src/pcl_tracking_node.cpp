@@ -14,6 +14,7 @@
 #include <geometry_msgs/PoseStamped.h>
 #include <visualization_msgs/Marker.h>
 #include "std_msgs/String.h"
+#include <tf/transform_broadcaster.h>
 
 #include <sstream>
 #include <vector>
@@ -98,22 +99,22 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   pcl::PassThrough<pcl::PointXYZ> pass;
   pass.setInputCloud (temp_cloud);
   // left - right
-  // pass.setFilterFieldName ("x");
-  // pass.setFilterLimits (-0.6, 0.6);
+  pass.setFilterFieldName ("x");
+  pass.setFilterLimits (-1.8, 1.8);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
   pass.setInputCloud (cloud_segment);
   // up - down
-  // pass.setFilterFieldName ("y");
-  // pass.setFilterLimits (-3, 0);
+  pass.setFilterFieldName ("y");
+  pass.setFilterLimits (-5, 1.1);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
   pass.setInputCloud (cloud_segment);
   // backward - forward
   pass.setFilterFieldName ("z");
-  pass.setFilterLimits (1, 3.5);
+  pass.setFilterLimits (0, 4);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
@@ -133,6 +134,7 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 	  sum_z = sum_z / cloud_segment->points.size();
 
 	  geometry_msgs::PoseStamped sPose;
+    sPose.header.stamp = ros::Time::now();
 
     marker.lifetime = ros::Duration();
     
@@ -189,6 +191,13 @@ main (int argc, char** argv)
   // Initialize ROS
   ros::init (argc, argv, "pcl_tracking");
   ros::NodeHandle nh;
+
+  // tf::TransformBroadcaster br;
+  // tf::Transform transform;
+
+  // transform.setOrigin( tf::Vector3(0.0, 0.0, -1.1) );
+  // transform.setRotation( tf::Quaternion(0, 0, 0, 1) );
+  // br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "camera_depth_frame", "test_tf"));
 
   // Initialize marker
   marker_init();
