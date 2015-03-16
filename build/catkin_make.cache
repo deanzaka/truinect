@@ -1,2 +1,2 @@
-my_pcl_tutorial:pcl_tracking:rviz_test
+learning_tf:my_pcl_tutorial:pcl_tracking:rviz_test
 -DCATKIN_DEVEL_PREFIX=/home/deanzaka/Github/truinect/devel -DCMAKE_INSTALL_PREFIX=/home/deanzaka/Github/truinect/install -G Unix Makefiles
