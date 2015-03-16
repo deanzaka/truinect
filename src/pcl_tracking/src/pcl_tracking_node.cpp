@@ -100,21 +100,21 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   pass.setInputCloud (temp_cloud);
   // left - right
   pass.setFilterFieldName ("x");
-  pass.setFilterLimits (-1.8, 1.8);
+  pass.setFilterLimits (-2, 2);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
   pass.setInputCloud (cloud_segment);
   // up - down
   pass.setFilterFieldName ("y");
-  pass.setFilterLimits (-5, 1.1);
+  pass.setFilterLimits (0, 2);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
   pass.setInputCloud (cloud_segment);
   // backward - forward
   pass.setFilterFieldName ("z");
-  pass.setFilterLimits (0, 4);
+  pass.setFilterLimits (0.8, 3);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_segment);
 
@@ -122,7 +122,7 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   float sum_x = 0;
   float sum_y = 0;
   float sum_z = 0;
-  if(cloud_segment->points.size() > 0) {
+  if(cloud_segment->points.size() > 50) {
 	  for(size_t i = 0; i < cloud_segment->points.size(); ++i) {
 	  	sum_x += cloud_segment->points[i].x;
 	  	sum_y += cloud_segment->points[i].y;
@@ -154,6 +154,10 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
     p.x = sum_z;
     p.y = -(sum_x);
     p.z = -(sum_y);
+
+
+    // line.lifetime = ros::Duration(5);
+    // points.lifetime = ros::Duration(5);
 
     line.pose.orientation.w = 1.0;
     points.pose.orientation.w = 1.0;

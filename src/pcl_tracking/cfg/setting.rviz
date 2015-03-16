@@ -45,16 +45,16 @@ Visualization Manager:
       Offset:
         X: 0
         Y: 0
-        Z: -1.1
-      Plane: XY
+        Z: 0
+      Plane: YZ
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: -1.09248
-        Min Value: -1.09725
+        Max Value: -0.000831863
+        Min Value: -0.000831863
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -102,10 +102,6 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        camera_link:
-          camera_rgb_frame:
-            camera_rgb_optical_frame:
-              {}
         new_world:
           camera_depth_frame:
             {}
@@ -116,7 +112,7 @@ Visualization Manager:
       Marker Topic: /visualization_marker
       Name: Marker
       Namespaces:
-        {}
+        "": true
       Queue Size: 100
       Value: true
   Enabled: true
@@ -143,22 +139,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.82002
+      Distance: 11.5949
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 2.17751
-        Y: -0.840142
-        Z: -0.814825
+        X: 1.24106
+        Y: 0.505861
+        Z: -0.748911
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.159798
+      Pitch: -1.3348
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.70515
+      Yaw: 6.27022
     Saved: ~
 Window Geometry:
   Displays:
