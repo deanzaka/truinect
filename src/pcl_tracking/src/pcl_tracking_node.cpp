@@ -1,3 +1,4 @@
+
 #include <ros/ros.h>
 #include <ros/console.h>
 
@@ -14,7 +15,6 @@
 #include <geometry_msgs/PoseStamped.h>
 #include <visualization_msgs/Marker.h>
 #include "std_msgs/String.h"
-#include <tf/transform_broadcaster.h>
 
 #include <sstream>
 #include <vector>
@@ -38,7 +38,7 @@ marker_init() {
 	uint32_t line_strip = visualization_msgs::Marker::LINE_STRIP;
 	uint32_t points_mark =  visualization_msgs::Marker::POINTS;
 
-  points.header.frame_id = line.header.frame_id = marker.header.frame_id = "new_world";
+  points.header.frame_id = line.header.frame_id = marker.header.frame_id = "camera_link";
   points.header.stamp = line.header.stamp = marker.header.stamp = ros::Time::now();
   marker.type = shape;
   line.type = line_strip;
@@ -195,13 +195,6 @@ main (int argc, char** argv)
   // Initialize ROS
   ros::init (argc, argv, "pcl_tracking");
   ros::NodeHandle nh;
-
-  // tf::TransformBroadcaster br;
-  // tf::Transform transform;
-
-  // transform.setOrigin( tf::Vector3(0.0, 0.0, -1.1) );
-  // transform.setRotation( tf::Quaternion(0, 0, 0, 1) );
-  // br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "camera_depth_frame", "test_tf"));
 
   // Initialize marker
   marker_init();

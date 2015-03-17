@@ -813,6 +813,19 @@ topic_tools_generate_messages_py/fast:
 .PHONY : topic_tools_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named kinect_tf_broadcaster
+
+# Build rule for target.
+kinect_tf_broadcaster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_tf_broadcaster
+.PHONY : kinect_tf_broadcaster
+
+# fast build rule for target.
+kinect_tf_broadcaster/fast:
+	$(MAKE) -f pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build.make pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build
+.PHONY : kinect_tf_broadcaster/fast
+
+#=============================================================================
 # Target rules for targets named pcl_tracking_node
 
 # Build rule for target.
@@ -1045,6 +1058,7 @@ help:
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... kinect_tf_broadcaster"
 	@echo "... pcl_tracking_node"
 	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_lisp"

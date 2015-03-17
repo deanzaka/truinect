@@ -150,6 +150,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/rule:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/rule
+.PHONY : pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/rule
+
+# Convenience name for target.
+kinect_tf_broadcaster: pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/rule
+.PHONY : kinect_tf_broadcaster
+
+# fast build rule for target.
+kinect_tf_broadcaster/fast:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build.make pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build
+.PHONY : kinect_tf_broadcaster/fast
+
+# Convenience name for target.
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule:
 	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule
 .PHONY : pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule
@@ -205,6 +219,30 @@ visualization_msgs_generate_messages_py/fast:
 	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
 .PHONY : visualization_msgs_generate_messages_py/fast
 
+src/kinect_tf_broadcaster.o: src/kinect_tf_broadcaster.cpp.o
+.PHONY : src/kinect_tf_broadcaster.o
+
+# target to build an object file
+src/kinect_tf_broadcaster.cpp.o:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build.make pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/src/kinect_tf_broadcaster.cpp.o
+.PHONY : src/kinect_tf_broadcaster.cpp.o
+
+src/kinect_tf_broadcaster.i: src/kinect_tf_broadcaster.cpp.i
+.PHONY : src/kinect_tf_broadcaster.i
+
+# target to preprocess a source file
+src/kinect_tf_broadcaster.cpp.i:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build.make pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/src/kinect_tf_broadcaster.cpp.i
+.PHONY : src/kinect_tf_broadcaster.cpp.i
+
+src/kinect_tf_broadcaster.s: src/kinect_tf_broadcaster.cpp.s
+.PHONY : src/kinect_tf_broadcaster.s
+
+# target to generate assembly for a file
+src/kinect_tf_broadcaster.cpp.s:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build.make pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/src/kinect_tf_broadcaster.cpp.s
+.PHONY : src/kinect_tf_broadcaster.cpp.s
+
 src/pcl_tracking_node.o: src/pcl_tracking_node.cpp.o
 .PHONY : src/pcl_tracking_node.o
 
@@ -239,6 +277,7 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... kinect_tf_broadcaster"
 	@echo "... list_install_components"
 	@echo "... pcl_tracking_node"
 	@echo "... rebuild_cache"
@@ -246,6 +285,9 @@ help:
 	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... src/kinect_tf_broadcaster.o"
+	@echo "... src/kinect_tf_broadcaster.i"
+	@echo "... src/kinect_tf_broadcaster.s"
 	@echo "... src/pcl_tracking_node.o"
 	@echo "... src/pcl_tracking_node.i"
 	@echo "... src/pcl_tracking_node.s"

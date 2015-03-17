@@ -46,15 +46,15 @@ Visualization Manager:
         X: 0
         Y: 0
         Z: 0
-      Plane: YZ
+      Plane: XY
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: -0.000831863
-        Min Value: -0.000831863
+        Max Value: -0.00193031
+        Min Value: -0.493837
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -84,6 +84,8 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        base_link:
+          Value: true
         camera_depth_frame:
           Value: true
         camera_depth_optical_frame:
@@ -94,7 +96,7 @@ Visualization Manager:
           Value: true
         camera_rgb_optical_frame:
           Value: true
-        new_world:
+        world:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -102,23 +104,29 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        new_world:
-          camera_depth_frame:
-            {}
+        world:
+          base_link:
+            camera_link:
+              camera_depth_frame:
+                camera_depth_optical_frame:
+                  {}
+              camera_rgb_frame:
+                camera_rgb_optical_frame:
+                  {}
       Update Interval: 0
       Value: true
     - Class: rviz/Marker
-      Enabled: true
+      Enabled: false
       Marker Topic: /visualization_marker
       Name: Marker
       Namespaces:
-        "": true
+        {}
       Queue Size: 100
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: new_world
+    Fixed Frame: world
     Frame Rate: 30
   Name: root
   Tools:
@@ -139,22 +147,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 11.5949
+      Distance: 7.83764
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.24106
-        Y: 0.505861
-        Z: -0.748911
+        X: 1.25399
+        Y: 0.148785
+        Z: -0.820348
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: -1.3348
+      Pitch: 0.974797
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.27022
+      Yaw: 3.21714
     Saved: ~
 Window Geometry:
   Displays:

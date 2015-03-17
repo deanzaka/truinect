@@ -108,6 +108,7 @@ include_directories(
 
 ## Declare a cpp executable
 add_executable(pcl_tracking_node src/pcl_tracking_node.cpp)
+add_executable(kinect_tf_broadcaster src/kinect_tf_broadcaster.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -115,6 +116,9 @@ add_executable(pcl_tracking_node src/pcl_tracking_node.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(pcl_tracking_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(kinect_tf_broadcaster
   ${catkin_LIBRARIES}
 )
 

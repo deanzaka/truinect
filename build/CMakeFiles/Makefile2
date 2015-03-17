@@ -1716,10 +1716,12 @@ clean: my_pcl_tutorial/CMakeFiles/topic_tools_generate_messages_py.dir/clean
 # Directory level rules for directory pcl_tracking
 
 # Convenience name for "all" pass in the directory.
+pcl_tracking/all: pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/all
 pcl_tracking/all: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/all
 .PHONY : pcl_tracking/all
 
 # Convenience name for "clean" pass in the directory.
+pcl_tracking/clean: pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/clean
 pcl_tracking/clean: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/clean
 pcl_tracking/clean: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
 pcl_tracking/clean: pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean
@@ -1731,13 +1733,48 @@ pcl_tracking/preinstall:
 .PHONY : pcl_tracking/preinstall
 
 #=============================================================================
+# Target rules for target pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir
+
+# All Build rule for target.
+pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/all:
+	$(MAKE) -f pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build.make pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/depend
+	$(MAKE) -f pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build.make pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  4
+	@echo "Built target kinect_tf_broadcaster"
+.PHONY : pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/all
+
+# Include target in all.
+all: pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deanzaka/Github/truinect/build/CMakeFiles 0
+.PHONY : pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/rule
+
+# Convenience name for target.
+kinect_tf_broadcaster: pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/rule
+.PHONY : kinect_tf_broadcaster
+
+# clean rule for target.
+pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/clean:
+	$(MAKE) -f pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build.make pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/clean
+.PHONY : pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/clean
+
+# clean rule for target.
+clean: pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target pcl_tracking/CMakeFiles/pcl_tracking_node.dir
 
 # All Build rule for target.
 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/all:
 	$(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/depend
 	$(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  5
 	@echo "Built target pcl_tracking_node"
 .PHONY : pcl_tracking/CMakeFiles/pcl_tracking_node.dir/all
 
@@ -1880,7 +1917,7 @@ rviz_test/preinstall:
 rviz_test/CMakeFiles/rviz_test_node.dir/all:
 	$(MAKE) -f rviz_test/CMakeFiles/rviz_test_node.dir/build.make rviz_test/CMakeFiles/rviz_test_node.dir/depend
 	$(MAKE) -f rviz_test/CMakeFiles/rviz_test_node.dir/build.make rviz_test/CMakeFiles/rviz_test_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  6
 	@echo "Built target rviz_test_node"
 .PHONY : rviz_test/CMakeFiles/rviz_test_node.dir/all
 
@@ -2031,7 +2068,7 @@ clean: learning_tf/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 learning_tf/CMakeFiles/turtle_tf_broadcaster.dir/all:
 	$(MAKE) -f learning_tf/CMakeFiles/turtle_tf_broadcaster.dir/build.make learning_tf/CMakeFiles/turtle_tf_broadcaster.dir/depend
 	$(MAKE) -f learning_tf/CMakeFiles/turtle_tf_broadcaster.dir/build.make learning_tf/CMakeFiles/turtle_tf_broadcaster.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  7
 	@echo "Built target turtle_tf_broadcaster"
 .PHONY : learning_tf/CMakeFiles/turtle_tf_broadcaster.dir/all
 
@@ -2066,7 +2103,7 @@ clean: learning_tf/CMakeFiles/turtle_tf_broadcaster.dir/clean
 learning_tf/CMakeFiles/turtle_tf_listener.dir/all:
 	$(MAKE) -f learning_tf/CMakeFiles/turtle_tf_listener.dir/build.make learning_tf/CMakeFiles/turtle_tf_listener.dir/depend
 	$(MAKE) -f learning_tf/CMakeFiles/turtle_tf_listener.dir/build.make learning_tf/CMakeFiles/turtle_tf_listener.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/deanzaka/Github/truinect/build/CMakeFiles  8
 	@echo "Built target turtle_tf_listener"
 .PHONY : learning_tf/CMakeFiles/turtle_tf_listener.dir/all
 

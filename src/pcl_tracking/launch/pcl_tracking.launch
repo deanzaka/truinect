@@ -2,14 +2,16 @@
   
   <arg name="rviz" default="True" />
 
-  <node pkg="tf" type="static_transform_publisher" name="world_kinect_tf_bc" args="0 0 0 0 0 0 /new_world /camera_depth_frame 10" />
-
   <group>
     <include file="$(find freenect_launch)/launch/freenect.launch"/>
   </group>
   
   <group>
   	<node pkg="pcl_tracking" name="pcl_tracking" type="pcl_tracking_node" args="input:=/camera/depth/points"/>
+  </group>
+  
+  <group>
+    <node pkg="pcl_tracking" name="kinect_tf_broadcaster" type="kinect_tf_broadcaster"/>
   </group>
 
   <group if="$(arg rviz)">

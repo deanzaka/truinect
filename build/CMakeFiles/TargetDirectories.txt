@@ -19,6 +19,7 @@
 /home/deanzaka/Github/truinect/build/my_pcl_tutorial/CMakeFiles/geometry_msgs_generate_messages_py.dir
 /home/deanzaka/Github/truinect/build/gtest/CMakeFiles/gtest.dir
 /home/deanzaka/Github/truinect/build/gtest/CMakeFiles/gtest_main.dir
+/home/deanzaka/Github/truinect/build/pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir
 /home/deanzaka/Github/truinect/build/my_pcl_tutorial/CMakeFiles/nodelet_generate_messages_cpp.dir
 /home/deanzaka/Github/truinect/build/my_pcl_tutorial/CMakeFiles/nodelet_generate_messages_lisp.dir
 /home/deanzaka/Github/truinect/build/my_pcl_tutorial/CMakeFiles/nodelet_generate_messages_py.dir
