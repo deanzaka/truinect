@@ -164,18 +164,32 @@ kinect_tf_broadcaster/fast:
 .PHONY : kinect_tf_broadcaster/fast
 
 # Convenience name for target.
-pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule:
-	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule
-.PHONY : pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule
+pcl_tracking/CMakeFiles/marker_transform.dir/rule:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/marker_transform.dir/rule
+.PHONY : pcl_tracking/CMakeFiles/marker_transform.dir/rule
 
 # Convenience name for target.
-pcl_tracking_node: pcl_tracking/CMakeFiles/pcl_tracking_node.dir/rule
-.PHONY : pcl_tracking_node
+marker_transform: pcl_tracking/CMakeFiles/marker_transform.dir/rule
+.PHONY : marker_transform
 
 # fast build rule for target.
-pcl_tracking_node/fast:
-	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build
-.PHONY : pcl_tracking_node/fast
+marker_transform/fast:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/marker_transform.dir/build.make pcl_tracking/CMakeFiles/marker_transform.dir/build
+.PHONY : marker_transform/fast
+
+# Convenience name for target.
+pcl_tracking/CMakeFiles/pcl_input.dir/rule:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f CMakeFiles/Makefile2 pcl_tracking/CMakeFiles/pcl_input.dir/rule
+.PHONY : pcl_tracking/CMakeFiles/pcl_input.dir/rule
+
+# Convenience name for target.
+pcl_input: pcl_tracking/CMakeFiles/pcl_input.dir/rule
+.PHONY : pcl_input
+
+# fast build rule for target.
+pcl_input/fast:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/pcl_input.dir/build.make pcl_tracking/CMakeFiles/pcl_input.dir/build
+.PHONY : pcl_input/fast
 
 # Convenience name for target.
 pcl_tracking/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
@@ -243,29 +257,53 @@ src/kinect_tf_broadcaster.cpp.s:
 	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/build.make pcl_tracking/CMakeFiles/kinect_tf_broadcaster.dir/src/kinect_tf_broadcaster.cpp.s
 .PHONY : src/kinect_tf_broadcaster.cpp.s
 
-src/pcl_tracking_node.o: src/pcl_tracking_node.cpp.o
-.PHONY : src/pcl_tracking_node.o
+src/marker_transform.o: src/marker_transform.cpp.o
+.PHONY : src/marker_transform.o
 
 # target to build an object file
-src/pcl_tracking_node.cpp.o:
-	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.o
-.PHONY : src/pcl_tracking_node.cpp.o
+src/marker_transform.cpp.o:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/marker_transform.dir/build.make pcl_tracking/CMakeFiles/marker_transform.dir/src/marker_transform.cpp.o
+.PHONY : src/marker_transform.cpp.o
 
-src/pcl_tracking_node.i: src/pcl_tracking_node.cpp.i
-.PHONY : src/pcl_tracking_node.i
+src/marker_transform.i: src/marker_transform.cpp.i
+.PHONY : src/marker_transform.i
 
 # target to preprocess a source file
-src/pcl_tracking_node.cpp.i:
-	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.i
-.PHONY : src/pcl_tracking_node.cpp.i
+src/marker_transform.cpp.i:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/marker_transform.dir/build.make pcl_tracking/CMakeFiles/marker_transform.dir/src/marker_transform.cpp.i
+.PHONY : src/marker_transform.cpp.i
 
-src/pcl_tracking_node.s: src/pcl_tracking_node.cpp.s
-.PHONY : src/pcl_tracking_node.s
+src/marker_transform.s: src/marker_transform.cpp.s
+.PHONY : src/marker_transform.s
 
 # target to generate assembly for a file
-src/pcl_tracking_node.cpp.s:
-	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/pcl_tracking_node.dir/build.make pcl_tracking/CMakeFiles/pcl_tracking_node.dir/src/pcl_tracking_node.cpp.s
-.PHONY : src/pcl_tracking_node.cpp.s
+src/marker_transform.cpp.s:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/marker_transform.dir/build.make pcl_tracking/CMakeFiles/marker_transform.dir/src/marker_transform.cpp.s
+.PHONY : src/marker_transform.cpp.s
+
+src/pcl_input.o: src/pcl_input.cpp.o
+.PHONY : src/pcl_input.o
+
+# target to build an object file
+src/pcl_input.cpp.o:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/pcl_input.dir/build.make pcl_tracking/CMakeFiles/pcl_input.dir/src/pcl_input.cpp.o
+.PHONY : src/pcl_input.cpp.o
+
+src/pcl_input.i: src/pcl_input.cpp.i
+.PHONY : src/pcl_input.i
+
+# target to preprocess a source file
+src/pcl_input.cpp.i:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/pcl_input.dir/build.make pcl_tracking/CMakeFiles/pcl_input.dir/src/pcl_input.cpp.i
+.PHONY : src/pcl_input.cpp.i
+
+src/pcl_input.s: src/pcl_input.cpp.s
+.PHONY : src/pcl_input.s
+
+# target to generate assembly for a file
+src/pcl_input.cpp.s:
+	cd /home/deanzaka/Github/truinect/build && $(MAKE) -f pcl_tracking/CMakeFiles/pcl_input.dir/build.make pcl_tracking/CMakeFiles/pcl_input.dir/src/pcl_input.cpp.s
+.PHONY : src/pcl_input.cpp.s
 
 # Help Target
 help:
@@ -279,7 +317,8 @@ help:
 	@echo "... install/strip"
 	@echo "... kinect_tf_broadcaster"
 	@echo "... list_install_components"
-	@echo "... pcl_tracking_node"
+	@echo "... marker_transform"
+	@echo "... pcl_input"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... visualization_msgs_generate_messages_cpp"
@@ -288,9 +327,12 @@ help:
 	@echo "... src/kinect_tf_broadcaster.o"
 	@echo "... src/kinect_tf_broadcaster.i"
 	@echo "... src/kinect_tf_broadcaster.s"
-	@echo "... src/pcl_tracking_node.o"
-	@echo "... src/pcl_tracking_node.i"
-	@echo "... src/pcl_tracking_node.s"
+	@echo "... src/marker_transform.o"
+	@echo "... src/marker_transform.i"
+	@echo "... src/marker_transform.s"
+	@echo "... src/pcl_input.o"
+	@echo "... src/pcl_input.i"
+	@echo "... src/pcl_input.s"
 .PHONY : help
 
 

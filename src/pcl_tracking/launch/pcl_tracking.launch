@@ -7,11 +7,15 @@
   </group>
   
   <group>
-  	<node pkg="pcl_tracking" name="pcl_tracking" type="pcl_tracking_node" args="input:=/camera/depth/points"/>
+  	<node pkg="pcl_tracking" name="pcl_input" type="pcl_input" args="input:=/camera/depth/points"/>
   </group>
   
   <group>
     <node pkg="pcl_tracking" name="kinect_tf_broadcaster" type="kinect_tf_broadcaster"/>
+  </group>
+
+  <group>
+    <node pkg="pcl_tracking" name="marker_transform" type="marker_transform"/>
   </group>
 
   <group if="$(arg rviz)">

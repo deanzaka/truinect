@@ -2,7 +2,7 @@
 #include <tf/transform_broadcaster.h>
 
 int main(int argc, char** argv){
-  ros::init(argc, argv, "my_tf_broadcaster");
+  ros::init(argc, argv, "kinect_tf_broadcaster");
   ros::NodeHandle node;
 
   tf::TransformBroadcaster br;
