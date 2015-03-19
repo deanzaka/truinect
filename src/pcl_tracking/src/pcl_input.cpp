@@ -19,14 +19,11 @@
 #include <sstream>
 #include <vector>
 
-ros::Publisher pub;
+ros::Publisher cloud_pub;
 ros::Publisher cock_pose_pub;
-ros::Publisher marker_pub;
-
-visualization_msgs::Marker marker, line, points;
 
 void 
-cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
+cloud_cb_black (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 {
   // Container for original & filtered data
   pcl::PCLPointCloud2* cloud = new pcl::PCLPointCloud2; 
@@ -107,7 +104,7 @@ cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   pcl::toROSMsg(*cloud_segment, output);
 
   // Publish the data
-  pub.publish (output);
+  cloud_pub.publish (output);
 }
 
 int
@@ -118,10 +115,10 @@ main (int argc, char** argv)
   ros::NodeHandle nh;
 
   // Create a ROS subscriber for the input point cloud
-  ros::Subscriber sub = nh.subscribe ("input", 1, cloud_cb);
+  ros::Subscriber sub = nh.subscribe ("/camera_black/depth/points", 1, cloud_cb_black);
 
   // Create a ROS publisher for the output point cloud
-  pub = nh.advertise<sensor_msgs::PointCloud2> ("output", 1);
+  cloud_pub = nh.advertise<sensor_msgs::PointCloud2> ("output", 1);
   cock_pose_pub = nh.advertise<geometry_msgs::PoseStamped>("cock_pose", 1);
 
   // Spin

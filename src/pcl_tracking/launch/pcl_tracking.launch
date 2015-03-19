@@ -3,11 +3,11 @@
   <arg name="rviz" default="True" />
 
   <group>
-    <include file="$(find freenect_launch)/launch/freenect.launch"/>
+    <include file="$(find pcl_tracking)/launch/freenect_black.launch"/>
   </group>
   
   <group>
-  	<node pkg="pcl_tracking" name="pcl_input" type="pcl_input" args="input:=/camera/depth/points"/>
+  	<node pkg="pcl_tracking" name="pcl_input" type="pcl_input"/>
   </group>
   
   <group>
